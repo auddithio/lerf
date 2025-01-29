@@ -17,7 +17,7 @@ class CLIPNetworkConfig(BaseImageEncoderConfig):
     _target: Type = field(default_factory=lambda: CLIPNetwork)
     clip_model_type: str = "ViT-B/16"
     clip_n_dims: int = 512
-    negatives: Tuple[str] = ("object", "things", "stuff", "texture")
+    negatives: Tuple[str, ...] = ("object", "things", "stuff", "texture")
 
 
 class CLIPNetwork(BaseImageEncoder):
