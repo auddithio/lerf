@@ -31,8 +31,8 @@ class LERFModelConfig(NerfactoModelConfig):
     """maximum scale used to compute relevancy with"""
     num_lerf_samples: int = 24
     hashgrid_layers: Tuple[int, int] = (12, 12)
-    hashgrid_resolutions: Tuple[Tuple[int]] = ((16, 128), (128, 512))
-    hashgrid_sizes: Tuple[int] = (19, 19)
+    hashgrid_resolutions: Tuple[Tuple[int, int], Tuple[int, int]] = ((16, 128), (128, 512))
+    hashgrid_sizes: Tuple[int, int] = (19, 19)
 
 
 class LERFModel(NerfactoModel):
